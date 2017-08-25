@@ -42,7 +42,8 @@ public class Accelerometer extends ReactContextBaseJavaModule implements SensorE
   public void startUpdates() {
     if (this.sensor == null) {
       // No sensor found, throw error
-      throw new RuntimeException("No Accelerometer found");
+      // throw new RuntimeException("No Accelerometer found");
+      Log.e("ERROR", "java.lang.RuntimeException: No Accelerometer found");
     }
     // Milisecond to Mikrosecond conversion
     sensorManager.registerListener(this, sensor, this.interval * 1000);

@@ -42,7 +42,8 @@ public class Gyroscope extends ReactContextBaseJavaModule implements SensorEvent
   public void startUpdates() {
     if (this.sensor == null) {
       // No sensor found, throw error
-      throw new RuntimeException("No Gyroscope found");
+      // throw new RuntimeException("No Gyroscope found");
+      Log.e("ERROR", "java.lang.RuntimeException: No Gyroscope found");
     }
     // Milisecond to Mikrosecond conversion
     sensorManager.registerListener(this, sensor, this.interval * 1000);
