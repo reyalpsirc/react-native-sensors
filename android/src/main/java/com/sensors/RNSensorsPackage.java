@@ -16,7 +16,6 @@ public class RNSensorsPackage implements ReactPackage {
       return Arrays.<NativeModule>asList(new Gyroscope(reactContext), new Accelerometer(reactContext));
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
       return Collections.emptyList();
     }
